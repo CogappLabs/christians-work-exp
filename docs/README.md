@@ -1,0 +1,36 @@
+# Fish or Foe Game
+
+A web-based quiz game about sustainable seafood choices, created for the Monterey Bay Aquarium.
+
+## GitHub Pages Setup
+
+This folder is structured for GitHub Pages hosting. To deploy:
+
+1. Push this repository to GitHub
+2. Go to your repository settings
+3. Navigate to "Pages" in the left sidebar
+4. Under "Source", select "Deploy from a branch"
+5. Select "main" branch and "/docs" folder
+6. Click "Save"
+
+Your site will be available at: `https://[username].github.io/[repository-name]/`
+
+## Game Structure
+
+- **index.html** - Main menu and game introduction
+- **quiz.html** - Quiz interface with fish images and multiple choice questions
+- **results.html** - Final score display
+- **displayInfo.html** - Information display between questions
+- **css/main.css** - Shared styles
+- **js/MainCode.js** - Game logic and functionality
+- **images/** - All fish images and background photos
+
+## How to Play
+
+1. Click "Click this to start" on the main page
+2. Look at the fish image and read its details
+3. Choose whether the fish is a "Best Choice", "Certified", "Good Alternative", or "Avoid"
+4. Learn more about each fish after making your choice
+5. Get your final score at the end
+
+The game teaches sustainable seafood choices based on the Monterey Bay Aquarium's Seafood Watch program.

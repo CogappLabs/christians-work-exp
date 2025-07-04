@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info</title>
+
+    <script src="js/MainCode.js"></script>
+
+    <link href="css/main.css" rel="stylesheet" />
+
+    <style type="text/css">
+      * {
+        text-align: center;
+        background-color: #afdde5;
+        color: #024950;
+        font: sans-serif;
+
+        max-width: 950px;
+        align-items: center;
+        margin-inline: auto;
+      }
+      /*
+        .button {
+            background-color: rgb(208, 200, 200);
+            font-size: 60px;
+            border-color: rgb(208, 200, 200)
+        }
+
+        .button:hover {
+            border-color: white;
+        }
+*/
+      #specificAnswer {
+        font-size: 50px;
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline;
+      }
+
+      Info {
+        font-size: 25px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      #displayContinue {
+        background-color: #024950;
+        color: #0fa4af;
+        transition: 0.5s;
+      }
+
+      #displayContinue:hover {
+        color: #0fa4af;
+        background-color: #024950;
+      }
+    </style>
+  </head>
+
+  <body onload="revealInfo()">
+    <container id="container">
+      <h1>Answer:</h1>
+      <h2 id="specificAnswer">Answer</h2>
+      <br />
+      <Info id="specificInfo">Click to reveal the info</Info>
+      <br /><br /><br /><br /><br />
+      <button id="displayContinue" onclick="nextQuestion()">Continue</button>
+      <br />
+    </container>
+  </body>
+</html>
