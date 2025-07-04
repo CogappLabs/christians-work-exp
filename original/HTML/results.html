@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Results</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <style type="text/css">
+
+        * {
+            transition: 0.5s;
+            color: white;
+        }
+
+            :root {
+                --primary-color: #4891ff;
+                --light-color: #f4f4f6;
+            }
+
+            body {
+                font-family: 'Poppins', sans-seirf;
+                font-size: 16px;
+                line-height: 1.5;
+                background-color: black;
+                text-align: center;
+                padding: 25px;
+            }
+
+            h1 {
+                color: white;
+                font-size: 3rem;
+                line-height: 1.2;
+                font-weight: 600;
+                margin: 40px 0 20px;
+                padding: 25px;
+
+            }
+
+            .result {
+                font-size: 2.2rem;
+                line-height: 1.4;
+                font-weight: normal;
+                margin: 20px 0 10px;
+            }
+
+            .result:hover {
+                color: var(--primary-color);
+            }
+
+            h4 {
+                padding: 25px;
+            }
+
+
+            section {
+                height: 100vh;
+                display: grid;
+                position: relative;
+                background: rgba(0, 0, 0.5);
+                background-size: cover;
+            }
+
+            section::before {
+                content: '';
+                background-image: url('montereybay2.jpeg');
+                background-size: cover;
+                position: absolute;
+                inset: 0;
+                opacity: 0.3;
+
+            }
+
+            subsection {
+                isolation: isolate;
+            }
+
+            #moveOn {
+                transition: 0.5s;
+            }
+
+
+    </style>
+
+<script src="../Javascript/MainCode.js"></script>
+
+</head>
+<body onload="displayResults()">
+
+    <section>
+        <subsection>
+    <br/>
+    <h1 class="title" id="howWell">Here's how you did:</h1>
+
+    <h2 class="result">Out of 10, you got:</h2> 
+    <h3 class="result" id="changingResults"> </h3>
+
+
+    <h4 class="result" id="rewardHeader">Which earns you a bronze trophy/ silver trophy/ gold trophy // Keep practicing to do better next time!</h4>
+    <br/>
+    <button class="button button-primary" id="moveOn" onclick="location.href='index.html'">Return to menu</button>
+
+            </subsection>
+    </section>
+</body>
+</html>

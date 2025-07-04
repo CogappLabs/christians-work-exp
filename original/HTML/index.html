@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish or Foe game</title>
+    <link href="../css/main.css" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            text-align: center;
+        }
+
+        h1 {
+ 
+            color: #8B7AE1;
+            text-align: center;
+            font-size: 60px;
+            text-decoration: underline;
+        }
+
+
+        h5 {
+            text-align: center;
+            font-size: 45px;
+            padding: 3px;
+            height: 10px;
+        }
+
+        h5:hover {
+            color: rgb(156, 44, 44);
+        }
+
+        body {
+            background-color: #003135;
+            font: bold;
+            color: white;
+        }
+
+        h3,
+        h2 {
+            font-size: 25px;
+        }
+
+
+        .container {
+            line-height: 1.7;
+            font-family: sans-serif
+        }
+
+
+        .decorationBar {
+            width: 100%;
+            height: 20px;
+            background-color: #5abed0ad;
+
+        }
+
+        button {
+            display: incline-block;
+            padding: 20px 30px;
+            background-color: #0A6CFF;
+            color: #333;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.5s;
+            font-size: 37.5px;
+            color: #333333;
+            position: relative;
+        }
+
+        button:hover {
+            padding: 20px 33px;
+        }
+
+        #picture {
+            background-image: url("montereybay.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.75);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .content { 
+            z-index: 3;
+            position: relative;
+            
+            max-width: 1150px;
+            align-items: center;
+            margin-inline: auto;
+ 
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script src="../JavaScript/MainCode.js"></script>
+
+    <div id="picture">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="decoration bar"></div>
+
+            <h1 id="firstTitle" class="headings">Monterey Bay Aquarirum (MBA): Fish or Foe game</h1>
+
+            <br />
+
+            <h2 class="titles">You will be presented with an image of a fish and given its details, then will have to
+                guess whether it is the best choice to buy, a certified food to buy by the Seafoodwatch website, whether
+                it is a good alternative to buy, or a food to be avoided. You will then be given more information about
+                that fish, and your score will be given to you at the end.</h2>
+
+            <br />
+
+            <h3 class="titles">It is important to buy our seafood responsibly because it is crucial for protecting
+                marine ecosystems, supporting sustainable fishing practices, and ensuring food security for current and
+                future generations. It helps prevent overfishing, habitat destruction, and the decline of fish
+                populations, while also promoting fair labor practices within the seafood industry.</h4>
+
+                <br />
+                <button class="button-primary" id=goToQuiz onclick="bootUpGame();"
+                    onclick="location.href='quiz.html';">Click this to start</button>
+        
+                <br/><br/><br/><br/><br/><br/>
+                </div>
+    </div>
+</body>
+
+</html>

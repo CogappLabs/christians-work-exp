@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <style type="text/css">
+        
+        .button {
+
+            padding: 10px 20px;
+            margin: 5px;
+            height: 150px;
+            width: 280px;
+            font-size: 25px;
+            font-weight: bold;
+            display: incline-block;
+
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+
+        body {
+ 
+
+            background-color: #003135;
+
+            color: white;
+
+
+            line-height: 1.5;
+            font: bold;
+        }
+
+        * {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        #bestOpt {
+            background-color: #7BAF28;
+
+        }
+
+        #bestOpt:hover {
+
+            background-color: #333333;
+            color: #7BAF28;
+            
+        }
+
+        #certOpt {
+            background-color: #6C6CD7;
+        }
+
+        #certOpt:hover {
+
+            
+            color: #9F9FE5;
+            background-color: #333333;
+            
+        }
+
+        #goodOpt {
+            background-color: rgb(231, 231, 31);
+        }
+
+        #goodOpt:hover {
+ 
+            color: rgb(231, 231, 31);
+            background-color: #333333;
+        }
+
+        #avoidOpt {
+            background-color: #DF8181;
+        }
+
+        #avoidOpt:hover {
+            color: #DF8181;
+            background-color: #333333;
+        }
+        
+        h1 {
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        #images {
+            display: block;
+            position: absolute;
+            top: 27px;
+            right: 27px;
+
+            height: 300px;
+            width: 450px;
+        }
+
+        #imagesTwo {
+            display: block;
+            position: absolute;
+            top: 27px;
+            left: 27px;
+
+            height: 300px;
+            width: 450px;
+        }
+
+        questionNum {
+            color: #faf7f6;
+        }
+
+        .hoverableText {
+            transition: 0.3s;
+        }
+
+        .hoverableText:hover {
+            color: #AFDDE5;
+        }
+
+
+
+        
+
+    </style>
+
+</head>
+<body onload="giveName();">
+
+    <script type="text/javascript" src="../Javascript/MainCode.js"></script>
+
+    <div id="picture"></div>
+        <div class="overlay"></div>
+        <div class="content">
+                <div class="decoration bar"></div>
+            
+
+    <img src="amberjack-yellowtail.webp" id="images" alt="A picture of a fish">
+    <img src="amberjack-yellowtail.webp" id="imagesTwo" alt="Another picture of a fish">
+    <questionNum id="whichQuestionNum">What question this is</questionNum>
+    <h1 class="hoverableText">Quiz:</h1>
+
+    <div class="questionBox">
+    <question class="hoverableText">What category is this fish?</question>
+    <br/><br/><name id="fishNameDiv" class="hoverableText">This is where the fish name will go</name><br/><br/>
+    </div>
+
+    <button id="bestOpt" class="button" onclick="selectBestOption();"> <br/> Best Choice <br/> </button>
+    <button  id="certOpt" class="button"  onclick="selectCertified();"> <br/> Certified <br/> </button>
+    <button id="goodOpt" class="button" onclick="selectGoodAlternative();"> <br/> Good Alternative <br/> </button>
+    <button  id="avoidOpt" class="button" onclick="selectAvoid();"> <br/> Avoid <br/> </button>
+
+    <br/><br/>
+
+    <TestingButton id="TestingButton" class="hoverableText"> Hurry up, there's a 10 second time limit!!!!!!!</TestingButton>
+
+        </div>
+    </div>
+
+</body>
+</html>
