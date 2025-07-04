@@ -72,8 +72,8 @@ const fish = [
 ];
 
 function selectBestOption() {
-  let answer = fish[localStorage.getItem("questionNum") - 1].Category;
-  if (answer == "Best Choice") {
+  const answer = fish[localStorage.getItem("questionNum") - 1].Category;
+  if (answer === "Best Choice") {
     playerScore = Number(localStorage.getItem("playerScore")) + 1;
     localStorage.setItem("playerScore", playerScore);
   }
@@ -85,8 +85,8 @@ function selectBestOption() {
 }
 
 function selectGoodAlternative() {
-  let answer = fish[localStorage.getItem("questionNum") - 1].Category;
-  if (answer == "Good Alternative") {
+  const answer = fish[localStorage.getItem("questionNum") - 1].Category;
+  if (answer === "Good Alternative") {
     playerScore = Number(localStorage.getItem("playerScore")) + 1;
     localStorage.setItem("playerScore", playerScore);
   }
@@ -98,8 +98,8 @@ function selectGoodAlternative() {
 }
 
 function selectCertified() {
-  let answer = fish[localStorage.getItem("questionNum") - 1].Category;
-  if (answer == "Certified") {
+  const answer = fish[localStorage.getItem("questionNum") - 1].Category;
+  if (answer === "Certified") {
     playerScore = Number(localStorage.getItem("playerScore")) + 1;
     localStorage.setItem("playerScore", playerScore);
   }
@@ -111,8 +111,8 @@ function selectCertified() {
 }
 
 function selectAvoid() {
-  let answer = fish[localStorage.getItem("questionNum") - 1].Category;
-  if (answer == "Avoid") {
+  const answer = fish[localStorage.getItem("questionNum") - 1].Category;
+  if (answer === "Avoid") {
     playerScore = Number(localStorage.getItem("playerScore")) + 1;
     localStorage.setItem("playerScore", playerScore);
   }
@@ -124,15 +124,15 @@ function selectAvoid() {
 }
 
 function revealInfo() {
-  let infoSlide = document.getElementById("specificInfo");
-  let tempInfo = fish[localStorage.getItem("questionNum") - 2].Info;
+  const infoSlide = document.getElementById("specificInfo");
+  const tempInfo = fish[localStorage.getItem("questionNum") - 2].Info;
   infoSlide.innerHTML = tempInfo;
   revealAnswer();
 }
 
 function revealAnswer() {
-  let answerSlide = document.getElementById("specificAnswer");
-  let tempAnswer = fish[localStorage.getItem("questionNum") - 2].Category;
+  const answerSlide = document.getElementById("specificAnswer");
+  const tempAnswer = fish[localStorage.getItem("questionNum") - 2].Category;
   answerSlide.innerHTML = tempAnswer;
 }
 
@@ -144,11 +144,11 @@ function bootUpGame() {
 }
 
 function giveName() {
-  let fishName = document.getElementById("fishNameDiv");
-  let tempName = fish[localStorage.getItem("questionNum") - 1].name;
+  const fishName = document.getElementById("fishNameDiv");
+  const tempName = fish[localStorage.getItem("questionNum") - 1].name;
   fishName.innerHTML = tempName;
 
-  setTimeout(function () {
+  setTimeout(() => {
     questionNum = Number(localStorage.getItem("questionNum")) + 1;
     localStorage.setItem("questionNum", questionNum);
 
@@ -160,7 +160,7 @@ function giveName() {
 }
 
 function nextQuestion() {
-  let tempCheck = localStorage.getItem("questionNum");
+  const tempCheck = localStorage.getItem("questionNum");
   if (tempCheck > 10) {
     window.location.assign("results.html");
   } else {
@@ -169,12 +169,12 @@ function nextQuestion() {
 }
 
 function displayResults() {
-  let points = localStorage.getItem("playerScore");
-  let resultDisplay = document.getElementById("changingResults");
+  const points = localStorage.getItem("playerScore");
+  const resultDisplay = document.getElementById("changingResults");
   resultDisplay.innerHTML = points;
 
-  let rewardDisplay = document.getElementById("rewardHeader");
-  if (points == 10) {
+  const rewardDisplay = document.getElementById("rewardHeader");
+  if (points === 10) {
     rewardDisplay.innerHTML = "Which earns you a gold trophy!!!";
   } else if (points > 7) {
     rewardDisplay.innerHTML = "Which earns you a silver trophy!!!";
@@ -187,13 +187,13 @@ function displayResults() {
 }
 
 function giveQuestionNum() {
-  let currentNum = localStorage.getItem("questionNum");
-  let displayPlace = document.getElementById("whichQuestionNum");
+  const currentNum = localStorage.getItem("questionNum");
+  const displayPlace = document.getElementById("whichQuestionNum");
   displayPlace.innerHTML = currentNum;
 }
 
 function selectRelevantImage() {
-  let currentRelevantImage =
+  const currentRelevantImage =
     fish[Number(localStorage.getItem("questionNum")) - 1].RelevantImage;
   document.getElementById("images").src = currentRelevantImage;
   document.getElementById("imagesTwo").src = currentRelevantImage;

@@ -15,6 +15,35 @@ This folder is structured for GitHub Pages hosting. To deploy:
 
 Your site will be available at: `https://[username].github.io/[repository-name]/`
 
+## Development Setup
+
+This project uses Biome for linting and formatting. To get started:
+
+```bash
+cd docs
+
+# Use the correct Node.js version (if using nvm)
+nvm use
+
+# Install dependencies
+npm install
+```
+
+### Available Scripts
+
+- `npm run lint` - Check for linting issues
+- `npm run lint:fix` - Fix linting issues automatically
+- `npm run format` - Check formatting
+- `npm run format:fix` - Fix formatting automatically
+- `npm run check` - Run both linting and formatting checks
+- `npm run check:fix` - Fix both linting and formatting issues
+
+### Notes
+
+- Biome is configured to only work within the `docs` directory
+- The `original` folder is completely ignored by the linter
+- Configuration is in `biome.json`
+
 ## Game Structure
 
 - **index.html** - Main menu and game introduction
